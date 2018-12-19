@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Student Daily Planner Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <body>
+    <h1>Student Daily Planner</h1>
+    <nav class="bar">
+      <a href="dashboard.html" class="bar-item">Dashboard</a>
+      <a href="schedule.html" class="bar-item">Schedule</a>
+
+    </nav>
+    <hr>
+    <div class="row">
+      <div class="column">
+        <h2>Today</h2>
+        <h3 id = "date"></h3>
+        <hr>
+      </div>
+    <div class="column">
+      <h2>Tasks</h2>
+      <h3 id = "numtasks"></h3>
+      <button class="open-button" onclick="openForm()">Add task</button>
+      <hr>
+      <p class = "tasks"></p>
+    </div>
+  </div>
+  <div class="form-popup" id="addTask">
+    <form action="action_page.php" class="form-container">
+    <h1>New Task</h1>
+    <label for="title"><b>Title</b></label>
+    <input type="text" placeholder="Enter Title" name="title" required>
+    <label for="dueDate"><b>Due Date</b></label>
+    <input type="text" placeholder="Due Date" name="due" required>
+    <button onclick="addTask" type="submit" class="btn">Add task</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+
+<script type="text/javascript" src="dashboard.js"></script>
+</body>
+</html>
