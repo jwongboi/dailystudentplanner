@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+<h1>Student Daily Planner</h1>
+<nav class="bar">
+  <a href="signupemail.html" class="bar-item">Sign up</a>
+  <a href="login.html" class="bar-item">Log in</a>
+  <a href="about.html" class="bar-item">About</a>
+  <a href="index.html" class="bar-item">Home</a>
+</nav>
+<hr>
+<form id="email" action="account-handling.php">
+  <div>
+    <h1>Sign Up</h1>
+    <p>Gain access to the student daily planner.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <button id ="email" type="button">Next</button>
+    <script type="text/javascript">
+        document.getElementById("email").onclick = function () {
+        location.href = "signuppw.html";
+        };
+    </script>
+    <script>
+      var email = document.getElementById("email");
+      document.getElementById("email").addEventListener("click", function()
+    </script>
+  </div>
+</form>
