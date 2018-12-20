@@ -2,7 +2,8 @@ n =  new Date();
 y = n.getFullYear();
 m = n.getMonth() + 1;
 d = n.getDate();
-document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+var todayDate = m + "/" + d + "/" + y;
+document.getElementById("date").innerHTML = todayDate;
 var numtasks = 0;
 var task = [];
 var todayTask = [];
@@ -76,7 +77,6 @@ function addTasks() {
   var due = document.getElementById("addTaskForm").elements[1].value;
   var importance = document.getElementById("addTaskForm").elements[2].value;
   var taskInput = "Title: " + title + " Due: " + due + " Importance: " + importance;
-  var todayDate = document.getElementById("date").value;
   task.push(taskInput);
   numtasks += 1;
   if (due === todayDate) {
