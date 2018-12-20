@@ -8,32 +8,39 @@
   <body>
     <h1>Student Daily Planner</h1>
     <nav class="bar">
+      <a href="signupemail.html" class="bar-item">Sign up</a>
+      <a href="login.html" class="bar-item">Log in</a>
+      <a href="about.html" class="bar-item">About</a>
+      <a href="index.html" class="bar-item">Home</a>
       <a href="dashboard.html" class="bar-item">Dashboard</a>
-      <a href="schedule.html" class="bar-item">Schedule</a>
-
+      <a href="dashboard.html" class="bar-item">Schedule</a>
     </nav>
     <hr>
     <div class="row">
       <div class="column">
         <h2>Today</h2>
         <h3 id = "date"></h3>
+        
         <hr>
+        <h3 id = "todayTasks"></h3>
       </div>
     <div class="column">
       <h2>Tasks</h2>
       <h3 id = "numtasks"></h3>
       <button class="open-button" onclick="openForm()">Add task</button>
       <hr>
-      <p id = "tasks"></p>
+      <h3 id = "tasks"></h3>
     </div>
   </div>
   <div class="form-popup" id="addTask">
-    <form action=" " class="form-container" id="addTaskForm" >
+    <form action=" " class="form-container" id="addTaskForm" onsubmit="event.preventDefault(); validateMyForm();">
     <h1>New Task</h1>
     <label for="title"><b>Title</b></label>
     <input type="text" placeholder="Enter Title" name="title" required>
     <label for="dueDate"><b>Due Date</b></label>
     <input type="text" placeholder="Due Date" name="dueDate" required>
+    <label for="Importance"><b>Importance</b></label>
+    <input type="text" placeholder="Importance" name="importance" required>
     <button onclick="addTasks()" type="submit" class="btn">Add task</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
