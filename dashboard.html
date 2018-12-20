@@ -24,21 +24,36 @@
       <h3 id = "numtasks"></h3>
       <button class="open-button" onclick="openForm()">Add task</button>
       <hr>
-      <p class = "tasks"></p>
+      <p id = "tasks"></p>
     </div>
   </div>
   <div class="form-popup" id="addTask">
-    <form action="action_page.php" class="form-container">
+    <form action=" " class="form-container" id="addTaskForm" >
     <h1>New Task</h1>
     <label for="title"><b>Title</b></label>
     <input type="text" placeholder="Enter Title" name="title" required>
     <label for="dueDate"><b>Due Date</b></label>
-    <input type="text" placeholder="Due Date" name="due" required>
-    <button onclick="addTask" type="submit" class="btn">Add task</button>
+    <input type="text" placeholder="Due Date" name="dueDate" required>
+    <button onclick="addTasks()" type="submit" class="btn">Add task</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
   </div>
+<!--
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
 
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+-->
 <script type="text/javascript" src="dashboard.js"></script>
 </body>
 </html>
