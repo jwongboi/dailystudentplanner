@@ -1,10 +1,12 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <h1>Student Daily Planner</h1>
 <nav class="bar">
-  <a href="signupemail.html" class="bar-item">Sign up</a>
-  <a href="login.html" class="bar-item">Log in</a>
-  <a href="about.html" class="bar-item">About</a>
-  <a href="index.html" class="bar-item">Home</a>
+      <a href="signupemail.html" class="bar-item">Sign up</a>
+      <a href="login.html" class="bar-item">Log in</a>
+      <a href="about.html" class="bar-item">About</a>
+      <a href="index.html" class="bar-item">Home</a>
+      <a href="dashboard.html" class="bar-item">Dashboard</a>
+      <a href="dashboard.html" class="bar-item">Schedule</a>
 </nav>
 <hr>
 <form action="account-handling.php">
@@ -14,16 +16,8 @@
     <hr>
 
     <label for="pw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="pw" required>
-    <button id ="pw" type="button">Finish</button>
-    <script type="text/javascript">
-        document.getElementById("email").onclick = function () {
-        location.href = "index.html";
-        };
-    </script>
-    <script>
-      var pw = document.getElementById("email");
-      document.getElementById("email").addEventListener("click", function()
-    </script>
+    <input id = "psw" type="password" placeholder="Enter Password" name="pw" required>
+    <button id ="finish" onclick="pswEnter()" type="submit">Finish</button>
+    <script type="text/javascript" src="account.js"></script>
   </div>
 </form>
