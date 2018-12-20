@@ -74,17 +74,17 @@ document.getElementById("numtasks").innerHTML = numtasks + " Tasks";
 function addTasks() {
   var title = document.getElementById("addTaskForm").elements[0].value;
   var due = document.getElementById("addTaskForm").elements[1].value;
-  var taskInput = "Title: " + title + " Due: " + due + " \n ";
+  var importance = document.getElementById("addTaskForm").elements[2].value;
+  var taskInput = "Title: " + title + " Due: " + due + " Importance: " + importance;
   var todayDate = document.getElementById("date").value;
   task.push(taskInput);
   numtasks += 1;
   if (due === todayDate) {
     todayTask.push(taskInput);
   }
-  document.getElementById("todayTasks").innerHTML = todayTask;
+  document.getElementById("todayTasks").innerHTML = task;
   document.getElementById("tasks").innerHTML = task;
   document.getElementById("numtasks").innerHTML = numtasks + " Tasks";
-  
 }
 
 function openForm() {
