@@ -5,6 +5,7 @@ d = n.getDate();
 document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
 var numtasks = 0;
 var task = [];
+var todayTask = [];
 
 document.getElementById("tasks").innerHTML = task;
 document.getElementById("numtasks").innerHTML = numtasks + " Tasks";
@@ -73,11 +74,17 @@ document.getElementById("numtasks").innerHTML = numtasks + " Tasks";
 function addTasks() {
   var title = document.getElementById("addTaskForm").elements[0].value;
   var due = document.getElementById("addTaskForm").elements[1].value;
-  var taskInput = "Title: " + title + " Due: " + due;
+  var taskInput = "Title: " + title + " Due: " + due + " \n ";
+  var todayDate = document.getElementById("date").value;
   task.push(taskInput);
   numtasks += 1;
+  if (due === todayDate) {
+    todayTask.push(taskInput);
+  }
+  document.getElementById("todayTasks").innerHTML = todayTask;
   document.getElementById("tasks").innerHTML = task;
   document.getElementById("numtasks").innerHTML = numtasks + " Tasks";
+  
 }
 
 function openForm() {
@@ -86,4 +93,17 @@ function openForm() {
 
 function closeForm() {
   document.getElementById("addTask").style.display = "none";
+}
+
+if (element.addEventListener) {
+    element.addEventListener("submit", function(evt) {
+        evt.preventDefault();
+        window.history.back();
+    }, true);
+}
+else {
+    element.attachEvent('onsubmit', function(evt){
+        evt.preventDefault();
+        window.history.back();
+    });
 }
