@@ -82,7 +82,7 @@ function addTasks() {
   if (due === todayDate) {
     todayTask.push(taskInput);
   }
-  document.getElementById("todayTasks").innerHTML = task;
+  document.getElementById("todayTasks").innerHTML = todayTask;
   document.getElementById("tasks").innerHTML = task;
   document.getElementById("numtasks").innerHTML = numtasks + " Tasks";
 }
